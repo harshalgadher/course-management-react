@@ -78,7 +78,7 @@ const Courses = () => {
                                 <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M16.444 18H19a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2.556M17 11V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v6h10ZM7 15h10v4a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4Z" />
                                 </svg>
-                                <span className="text-sm  text-gray-900 font-bold ">Cyber Security</span>
+                                <span className="text-sm  text-gray-900 font-bold ">DSA</span>
                             </div>
                         </div>
                     </div>

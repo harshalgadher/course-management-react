@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import SelactCourse from './pages/SelactCourse'
+import SelactedList from './components/SelactedList'
 
 const App = () => {
     return (
@@ -11,8 +12,9 @@ const App = () => {
             <Header />
             <Routes>
                 <Route path='/'  element={<Home />}/>
-                <Route path='courses' element={<Courses />}/>
-                <Route path='selactcourse' element={<SelactCourse />} />
+                <Route path='/courses' element={<Courses />}/>
+                <Route path='/selactcourse' element={<SelactCourse />} />
+                <Route path='/course-list' element={<SelactedList />} />
             </Routes>
         </BrowserRouter>
     )
