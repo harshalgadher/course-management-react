@@ -10,6 +10,8 @@ const SelectCourse = () => {
     course: '',
 
   }])
+
+  
   const navigate = useNavigate()
 
   const handlechange = (e) => {
