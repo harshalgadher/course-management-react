@@ -3,9 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const courseSlice = createSlice({
     name: "course",
     initialState: {
-        list:[
-           {id: 1,name: "harshal"}
-        ]
+        list:[]
     },
     reducers:{
         addCourse: (state , action ) => {

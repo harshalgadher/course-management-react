@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
             <nav className="bg-white border-gray-200">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 gap-y-4">
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/logo.jpg" className="h-8" alt="Flowbite Logo" />
                         <span className="self-center text-2xl font-bold underline whitespace-nowrap text-violet-600">Course management</span>
@@ -34,8 +34,8 @@ const Header = () => {
                     <div>
                         <button
                             type="button"
-                            onClick={() => navigate('/SelactCourse')}
-                            className="inline-flex items-center font-bold py-2 px-4 justify-center text-sm text-violet-600 rounded-lg hover:bg-violet-500 hover:text-white transition-all focus:outline-none border-2 border-violet-500 shadow-md"
+                            onClick={() => navigate('/SelectCourse')}
+                            className="w-full md:w-auto inline-flex items-center font-bold py-2 px-4 justify-center text-sm text-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all focus:outline-none border-2 border-violet-500 shadow-md"
                         >
                             START LEARNING
                         </button>

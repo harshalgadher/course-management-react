@@ -1,33 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const SelactCourse = () => {
+const SelectCourse = () => {
+  const [input, setinput] = useState([{
+    name: '',
+    age: '',
+    email: '',
+    phone: '',
+    course: '',
+
+  }])
+  const navigate = useNavigate()
+
+  const handlechange = (e) => {
+    setinput({ ...input, [e.target.id]: e.target.value })
+  }
+
+  const handleSubmit = () => {
+      e.preventDefault();
+  };
+
   return (
     <>
       <section className='container mx-auto w-4/12 my-16'>
 
-        <form>
+        <form onSubmit={() => {handleSubmit }}>
           <div className="grid gap-6 mb-6 md:grid-cols-2">
             <div>
               <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 ">First name</label>
-              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="John" required />
+              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="John" onChange={handlechange} value={input.name} required />
             </div>
             <div>
-              <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-gray-900 ">Last name</label>
-              <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Doe" required />
+              <label htmlFor="age" className="block mb-2 text-sm font-medium text-gray-900 ">Age</label>
+              <input type="text" id="age" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Enter Age" onChange={handlechange} value={input.age} required />
             </div>
             <div>
               <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
-              <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Enter your email" required />
+              <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Enter your email" onChange={handlechange} value={input.email} required />
             </div>
             <div>
               <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 ">Phone number</label>
-              <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="123-45-678" pattern="[0-9]{10}" required />
+              <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="123-45-678" pattern="[0-9]{10}" onChange={handlechange} value={input.phone} required />
             </div>
 
           </div>
           <div className="mb-6">
             <label htmlFor="course" className="block mb-2 text-sm font-medium text-gray-900 ">Course</label>
-            <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <select id="countries" onChange={handlechange} value={input.course} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option value="" disabled>Select your course..</option>
               <option value="1">Web Development</option>
               <option value="2">Mobile App Development</option>
@@ -63,4 +82,4 @@ const SelactCourse = () => {
   )
 }
 
-export default SelactCourse;
+export default SelectCourse;

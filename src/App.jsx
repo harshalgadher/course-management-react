@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
-import SelactCourse from './pages/SelactCourse'
-import SelactedList from './components/SelactedList'
+import SelectCourse from './pages/SelectCourse'
+import SelectedList from './components/SelectedList'
 
 const App = () => {
     return (
@@ -13,8 +13,8 @@ const App = () => {
             <Routes>
                 <Route path='/'  element={<Home />}/>
                 <Route path='/courses' element={<Courses />}/>
-                <Route path='/selactcourse' element={<SelactCourse />} />
-                <Route path='/course-list' element={<SelactedList />} />
+                <Route path='/selectcourse' element={<SelectCourse />} />
+                <Route path='/course-list' element={<SelectedList />} />
             </Routes>
         </BrowserRouter>
     )
