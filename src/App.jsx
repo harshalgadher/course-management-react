@@ -8,6 +8,7 @@ import SelectedList from './components/SelectedList'
 import EditeCourse from './pages/EditeCourse'
 import Login from './pages/Login'
 import ProtectedRoute from "./components/ProtectedRoute";
+import Contact from './pages/Contact'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path='/course-list' element={<ProtectedRoute islogedIn={islogedIn} Component={SelectedList} />} />
                 <Route path='/editecourse/:id' element={<ProtectedRoute islogedIn={islogedIn} Component={EditeCourse} />} />
                 <Route path="/login" element={<Login setIslogedIn={setIslogedIn} />} />
+                <Route path='/contact' element={<Contact />}/>
             </Routes>
         </BrowserRouter>
     )
