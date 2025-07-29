@@ -30,7 +30,7 @@ const courseSlice = createSlice({
         }
     }
 });
-console.log(courseSlice);
+// console.log(courseSlice);
 
 export const { addCourse, deleteCourse, updateCourse } = courseSlice.actions;
 export default courseSlice.reducer;

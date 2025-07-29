@@ -40,7 +40,7 @@ const Header = ({ islogedIn, setIslogedIn }) => {
                                 </Link>
                             </li>
                             {islogedIn && <li>
-                                <Link to="/course-list" className={`${pathname == '/course-list' ? "block py-2 px-3 rounded-sm md:bg-transparent md:p-0 text-violet-600 underline font-bold transition-all" : "block py-2 px-3 rounded-sm md:bg-transparent md:p-0 text-black  hover:text-violet-600 hover:underline font-bold transition-all"}`}> Selected List
+                                <Link to="/course-list" className={`${pathname == '/course-list' ? "block py-2 px-3 rounded-sm md:bg-transparent md:p-0 text-violet-600 underline font-bold transition-all" : "block py-2 px-3 rounded-sm md:bg-transparent md:p-0 text-black  hover:text-violet-600 hover:underline font-bold transition-all"}`}><i className="ri-list-check"></i> Selected List
                                 </Link>
                             </li>}
                         </ul>
@@ -50,7 +50,7 @@ const Header = ({ islogedIn, setIslogedIn }) => {
                         <button
                             type="button"
                             onClick={() => navigate('/SelectCourse')}
-                            className="w-full md:w-auto inline-flex items-center font-bold py-2 px-4 justify-center text-sm text-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all focus:outline-none border-2 border-violet-500 shadow-md"
+                            className="w-full md:w-auto inline-flex items-center font-bold py-2 px-4 justify-center text-sm text-violet-600 rounded-lg hover:bg-gradient-to-r from-violet-500 to-violet-800 hover:text-white transition-all focus:outline-none border-2 border-violet-500 shadow-md"
                         >
                             START LEARNING
                         </button>
